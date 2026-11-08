@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="skyGrad" cx="50%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#142147"/>
+      <stop offset="60%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#050814"/>
+    </radialGradient>
+
+    <!-- Glass Shield Gradient -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.35)"/>
+      <stop offset="50%" stop-color="rgba(203, 161, 53, 0.15)"/>
+      <stop offset="100%" stop-color="rgba(11, 19, 43, 0.65)"/>
+    </linearGradient>
+
+    <!-- Air Astana Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE588"/>
+      <stop offset="50%" stop-color="#CBA135"/>
+      <stop offset="100%" stop-color="#99771C"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="112" fill="url(#skyGrad)"/>
+
+  <!-- Subtle Navigation Ring / Compass Rose -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="rgba(203, 161, 53, 0.25)" stroke-width="2" stroke-dasharray="8 6"/>
+  <circle cx="256" cy="256" r="185" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.5"/>
+
+  <!-- Glassmorphic Hexagonal / Circular Shield -->
+  <circle cx="256" cy="256" r="170" fill="url(#shieldGrad)" stroke="rgba(255, 255, 255, 0.5)" stroke-width="2.5"/>
+
+  <!-- Twin-Engine Modern Airliner (Boeing 787 / A321LR Silhouette) in Flight -->
+  <g filter="url(#goldGlow)" transform="translate(0, -6)">
+    <!-- Main Fuselage and Nose -->
+    <path d="M256,92 C251,92 247,110 247,165 L247,325 L236,370 L210,390 L210,402 L253,392 L256,393 L259,392 L302,402 L302,390 L276,370 L265,325 L265,165 C265,110 261,92 256,92 Z" fill="url(#goldGrad)"/>
+    
+    <!-- Swept Wings with Sharklets/Raked Wingtips -->
+    <path d="M247,215 L80,312 C70,318 64,324 68,328 C72,332 84,330 96,324 L247,258 Z" fill="url(#goldGrad)"/>
+    <path d="M265,215 L432,312 C442,318 448,324 444,328 C440,332 428,330 416,324 L265,258 Z" fill="url(#goldGrad)"/>
+    
+    <!-- Wingtip Raked Aerodynamic Fins -->
+    <path d="M68,328 L64,306 L74,316 Z" fill="#FCE588"/>
+    <path d="M444,328 L448,306 L438,316 Z" fill="#FCE588"/>
+
+    <!-- High-Bypass Turbofan Jet Engines (LEAP-1A / GEnx) -->
+    <rect x="175" y="246" width="18" height="42" rx="9" fill="#0B132B" stroke="#FCE588" stroke-width="2"/>
+    <rect x="319" y="246" width="18" height="42" rx="9" fill="#0B132B" stroke="#FCE588" stroke-width="2"/>
+    <circle cx="184" cy="254" r="5" fill="#FCE588"/>
+    <circle cx="328" cy="254" r="5" fill="#FCE588"/>
+
+    <!-- Cockpit Flight Deck Windows (Glass Specular) -->
+    <path d="M251,120 L254,124 L251,128 L248,124 Z" fill="#0B132B"/>
+    <path d="M261,120 L258,124 L261,128 L264,124 Z" fill="#0B132B"/>
+    <polygon points="252,122 256,120 260,122 256,125" fill="#0B132B"/>
+  </g>
+
+  <!-- Golden 4-Point Compass Star at Top (EPST & Air Astana Emblem) -->
+  <path d="M256,48 L260,66 L278,70 L260,74 L256,92 L252,74 L234,70 L252,66 Z" fill="url(#goldGrad)"/>
+</svg>

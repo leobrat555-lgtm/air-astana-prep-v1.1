@@ -1,0 +1,18 @@
+{
+  "name": "Air Astana Cadet & Apprentice Prep",
+  "short_name": "CadetPrep",
+  "description": "Official AON/EPST Cognitive, Mixed Aptitude & Selection Suite for Air Astana Ab-Initio Pilot & Apprentice Engineer programs.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#070C18",
+  "theme_color": "#0B132B",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
